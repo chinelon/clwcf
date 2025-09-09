@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Support - Children Living With Cancer Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="support.css">
+    <link rel="shortcut icon" href="img/images-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation" class="logoimg">
+                <span class="logo-text">
+                    <strong>CHILDREN LIVING</strong><br>
+                    <strong> WITH CANCER FOUNDATION</strong><br>
+                    <small>Bridging the global divide in cancer care</small>
+                </span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate.html" class="btn-donate">Donate</a></li>
+                <li><a href="support.html" class="btn-support active">Get Support</a></li>
+                <li><a href="middlepage.html">Walkathon 2025</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+
+    <!-- Support Services Section -->
+    <section class="support-services">
+        <div class="container">
+            <h2>Our Support Services</h2>
+            
+            <!-- Emergency Support -->
+            <div class="service-section" id="emergency-support">
+                <div class="service-header">
+                    <div class="service-title">
+                        <h3>Emergency Support</h3>
+                        <p>Immediate assistance when you need it most</p>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-info">
+                        <h4>What We Provide:</h4>
+                        <ul>
+                            <li>Emergency financial assistance for urgent medical needs</li>
+                            <li>Crisis accommodation for families in urgent situations</li>
+                            <li>Emergency transportation to medical appointments</li>
+                            <li>24/7 emotional support hotline</li>
+                            <li>Rapid response team for critical situations</li>
+                        </ul>
+                        
+                        <div class="contact-info">
+                            <h4>Emergency Contacts:</h4>
+                            <div class="contact-details">
+                                <p><strong>UK:</strong> +44 797 571 3604</p>
+                                <p><strong>Nigeria:</strong> +234 8033 1569 08</p>
+                                <p><strong>Email:</strong> emergency@clwcf-ngo.org</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-form">
+                        <h4>Request Emergency Support</h4>
+                        <form class="support-form" id="emergencyForm">
+                            <input type="text" name="name" placeholder="Full Name" required>
+                            <input type="tel" name="phone" placeholder="Phone Number" required>
+                            <input type="email" name="email" placeholder="Email Address" required>
+                            <select name="urgency" required>
+                                <option value="">Select Urgency Level</option>
+                                <option value="critical">Critical - Immediate attention needed</option>
+                                <option value="urgent">Urgent - Within 24 hours</option>
+                                <option value="high">High - Within 48 hours</option>
+                            </select>
+                            <textarea name="situation" placeholder="Describe your situation and immediate needs" rows="4" required></textarea>
+                            <button type="submit" class="submit-btn emergency-btn">Submit Emergency Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial Assistance -->
+            <div class="service-section" id="financial-aid">
+                <div class="service-header">
+                    <div class="service-title">
+                        <h3>Financial Assistance</h3>
+                        <p>Financial support to ease the burden of cancer treatment</p>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-info">
+                        <h4>Available Financial Support:</h4>
+                        <ul>
+                            <li>Medical treatment and medication costs</li>
+                            <li>Hospital accommodation expenses</li>
+                            <li>Transportation to and from medical appointments</li>
+                            <li>Nutritional support and special dietary needs</li>
+                            <li>Educational support during treatment</li>
+                            <li>Family living expenses during treatment period</li>
+                        </ul>
+                        
+                        <div class="eligibility-info">
+                            <h4>Eligibility Criteria:</h4>
+                            <ul>
+                                <li>Child diagnosed with cancer (0-18 years)</li>
+                                <li>Family demonstrates financial need</li>
+                                <li>Medical documentation provided</li>
+                                <li>Resident in our service areas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="service-form">
+                        <h4>Apply for Financial Assistance</h4>
+                        <form class="support-form" id="financialForm">
+                            <div class="form-row">
+                                <input type="text" name="parentName" placeholder="Parent/Guardian Name" required>
+                                <input type="text" name="childName" placeholder="Child's Name" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="date" name="childDob" placeholder="Child's Date of Birth" required>
+                                <input type="text" name="diagnosis" placeholder="Cancer Diagnosis" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="tel" name="phone" placeholder="Phone Number" required>
+                                <input type="email" name="email" placeholder="Email Address" required>
+                            </div>
+                            <textarea name="address" placeholder="Full Address" rows="2" required></textarea>
+                            <select name="assistanceType" required>
+                                <option value="">Type of Assistance Needed</option>
+                                <option value="medical">Medical Treatment Costs</option>
+                                <option value="accommodation">Accommodation Expenses</option>
+                                <option value="transportation">Transportation Costs</option>
+                                <option value="living">Living Expenses</option>
+                                <option value="multiple">Multiple Types</option>
+                            </select>
+                            <textarea name="details" placeholder="Provide details about your financial needs and current situation" rows="4" required></textarea>
+                            <div class="file-upload">
+                                <label for="documents">Upload Supporting Documents (Medical records, bills, etc.)</label>
+                                <input type="file" id="documents" name="documents" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+                            </div>
+                            <button type="submit" class="submit-btn">Submit Application</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Counseling Services -->
+            <div class="service-section" id="counseling">
+                <div class="service-header">
+                    <div class="service-title">
+                        <h3>Counseling & Emotional Support</h3>
+                        <p>Professional mental health support for the whole family</p>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-info">
+                        <h4>Our Counseling Services:</h4>
+                        <ul>
+                            <li>Individual counseling for children with cancer</li>
+                            <li>Family therapy and support sessions</li>
+                            <li>Sibling support groups and counseling</li>
+                            <li>Grief and bereavement counseling</li>
+                            <li>Support groups for parents and caregivers</li>
+                            <li>Online counseling sessions available</li>
+                        </ul>
+                        
+                        <div class="counseling-options">
+                            <h4>Session Options:</h4>
+                            <div class="options-grid">
+                                <div class="option-card">
+                                    <h5>In-Person Sessions</h5>
+                                    <p>Face-to-face counseling at our centers</p>
+                                </div>
+                                <div class="option-card">
+                                    <h5>Online Sessions</h5>
+                                    <p>Video counseling from home</p>
+                                </div>
+                                <div class="option-card">
+                                    <h5>Phone Support</h5>
+                                    <p>Telephone counseling sessions</p>
+                                </div>
+                                <div class="option-card">
+                                    <h5>Group Sessions</h5>
+                                    <p>Support groups with other families</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-form">
+                        <h4>Request Counseling Support</h4>
+                        <form class="support-form" id="counselingForm">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="tel" name="phone" placeholder="Phone Number" required>
+                            <input type="email" name="email" placeholder="Email Address" required>
+                            <select name="relationship" required>
+                                <option value="">Your Relationship to Child</option>
+                                <option value="parent">Parent</option>
+                                <option value="guardian">Guardian</option>
+                                <option value="sibling">Sibling</option>
+                                <option value="patient">Patient</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <select name="counselingType" required>
+                                <option value="">Type of Counseling Needed</option>
+                                <option value="individual-child">Individual (Child)</option>
+                                <option value="individual-adult">Individual (Adult)</option>
+                                <option value="family">Family Therapy</option>
+                                <option value="sibling">Sibling Support</option>
+                                <option value="grief">Grief Counseling</option>
+                                <option value="group">Support Group</option>
+                            </select>
+                            <select name="preferredMethod" required>
+                                <option value="">Preferred Session Method</option>
+                                <option value="in-person">In-Person</option>
+                                <option value="online">Online Video</option>
+                                <option value="phone">Phone</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                            <textarea name="situation" placeholder="Tell us about your situation and what support you need" rows="4" required></textarea>
+                            <div class="availability">
+                                <label>Preferred availability:</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="availability" value="weekday-morning"> Weekday Mornings</label>
+                                    <label><input type="checkbox" name="availability" value="weekday-afternoon"> Weekday Afternoons</label>
+                                    <label><input type="checkbox" name="availability" value="weekday-evening"> Weekday Evenings</label>
+                                    <label><input type="checkbox" name="availability" value="weekend"> Weekends</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="submit-btn">Request Counseling</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practical Support -->
+            <div class="service-section" id="practical-support">
+                <div class="service-header">
+                    <div class="service-title">
+                        <h3>Practical Support</h3>
+                        <p>Day-to-day assistance to make life easier during treatment</p>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-info">
+                        <h4>Practical Support Services:</h4>
+                        <ul>
+                            <li>Accommodation near treatment centers</li>
+                            <li>Transportation to medical appointments</li>
+                            <li>Meal delivery and nutritional support</li>
+                            <li>Childcare for siblings during appointments</li>
+                            <li>Educational support and tutoring</li>
+                            <li>Equipment loans (wheelchairs, medical devices)</li>
+                            <li>Home care assistance</li>
+                        </ul>
+                        
+                        <div class="locations-info">
+                            <h4>Service Locations:</h4>
+                            <div class="locations-grid">
+                                <div class="location-card">
+                                    <h5>London, UK</h5>
+                                    <p>1st Floor, The South Quay Building<br>189 Marsh Wall, E14 9SH</p>
+                                </div>
+                                <div class="location-card">
+                                    <h5>Lagos, Nigeria</h5>
+                                    <p>10 Ayanboye Street<br>Anthony Village, Lagos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-form">
+                        <h4>Request Practical Support</h4>
+                        <form class="support-form" id="practicalForm">
+                            <div class="form-row">
+                                <input type="text" name="name" placeholder="Full Name" required>
+                                <input type="tel" name="phone" placeholder="Phone Number" required>
+                            </div>
+                            <input type="email" name="email" placeholder="Email Address" required>
+                            <textarea name="address" placeholder="Full Address" rows="2" required></textarea>
+                            <select name="supportType" required>
+                                <option value="">Type of Support Needed</option>
+                                <option value="accommodation">Accommodation</option>
+                                <option value="transportation">Transportation</option>
+                                <option value="meals">Meal Support</option>
+                                <option value="childcare">Childcare</option>
+                                <option value="education">Educational Support</option>
+                                <option value="equipment">Equipment Loan</option>
+                                <option value="homecare">Home Care</option>
+                                <option value="multiple">Multiple Services</option>
+                            </select>
+                            <div class="form-row">
+                                <input type="date" name="startDate" placeholder="Support Needed From" required>
+                                <input type="date" name="endDate" placeholder="Support Needed Until">
+                            </div>
+                            <textarea name="details" placeholder="Provide specific details about your practical support needs" rows="4" required></textarea>
+                            <button type="submit" class="submit-btn">Request Support</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources-section">
+        <div class="container">
+            <h2>Helpful Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-category">
+                    <h3> Educational Resources</h3>
+                    <div class="resource-list">
+                        <a href="#" class="resource-link">Understanding Childhood Cancer</a>
+                        <a href="#" class="resource-link">Treatment Options Guide</a>
+                        <a href="#" class="resource-link">Managing Side Effects</a>
+                        <a href="#" class="resource-link">Nutrition During Treatment</a>
+                        <a href="#" class="resource-link">School and Education Support</a>
+                    </div>
+                </div>
+                
+                <div class="resource-category">
+                    <h3> Support Groups</h3>
+                    <div class="resource-list">
+                        <a href="#" class="resource-link">Parent Support Groups</a>
+                        <a href="#" class="resource-link">Sibling Support Network</a>
+                        <a href="#" class="resource-link">Teen Cancer Support</a>
+                        <a href="#" class="resource-link">Survivor Support Groups</a>
+                        <a href="#" class="resource-link">Online Community Forums</a>
+                    </div>
+                </div>
+                
+                <div class="resource-category">
+                    <h3> Medical Resources</h3>
+                    <div class="resource-list">
+                        <a href="#" class="resource-link">Treatment Center Directory</a>
+                        <a href="#" class="resource-link">Specialist Doctors List</a>
+                        <a href="#" class="resource-link">Clinical Trials Information</a>
+                        <a href="#" class="resource-link">Second Opinion Services</a>
+                        <a href="#" class="resource-link">Medical Equipment Suppliers</a>
+                    </div>
+                </div>
+                
+                <div class="resource-category">
+                    <h3> Financial Resources</h3>
+                    <div class="resource-list">
+                        <a href="#" class="resource-link">Insurance Guidance</a>
+                        <a href="#" class="resource-link">Government Benefits</a>
+                        <a href="#" class="resource-link">Charity Fund Directory</a>
+                        <a href="#" class="resource-link">Fundraising Ideas</a>
+                        <a href="#" class="resource-link">Financial Planning Tips</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"></div>
+                            <div>
+                                <h4>Phone Numbers</h4>
+                                <p>UK: +44 797 571 3604</p>
+                                <p>Nigeria: +234 8033 1569 08</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon"></div>
+                            <div>
+                                <h4>Email Addresses</h4>
+                                <p>General: info@clwcf-ngo.org</p>
+                                <p>UK: uk@clwcf-ngo.org</p>
+                                <p>Emergency: emergency@clwcf-ngo.org</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon"></div>
+                            <div>
+                                <h4>Office Locations</h4>
+                                <p><strong>London:</strong> 1st Floor, The South Quay Building, 189 Marsh Wall, E14 9SH</p>
+                                <p><strong>Lagos:</strong> 10 Ayanboye Street, Anthony Village, Lagos</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon"></div>
+                            <div>
+                                <h4>Office Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                                <p>Emergency Support: 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="general-contact-form">
+                    <h3>Send us a Message</h3>
+                    <form class="support-form" id="generalContactForm">
+                        <div class="form-row">
+                            <input type="text" name="firstName" placeholder="First Name" required>
+                            <input type="text" name="lastName" placeholder="Last Name" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="email" name="email" placeholder="Email Address" required>
+                            <input type="tel" name="phone" placeholder="Phone Number">
+                        </div>
+                        <select name="subject" required>
+                            <option value="">Select Subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Request Support</option>
+                            <option value="volunteer">Volunteer Opportunities</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="success-icon">✅</span>
+                <h2>Request Submitted</h2>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for reaching out to us. Your request has been received and our team will get back to you within 24 hours.</p>
+                <p>For urgent matters, please call our emergency helpline.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" onclick="closeModal()">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <div class="footer-logo">
+                            <img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation" class="footer-logoimg">
+                            <div class="footer-brand">
+                                <h3>CHILDREN LIVING<br>WITH CANCER FOUNDATION</h3>
+                                <p>Bridging the global divide in cancer care</p>
+                            </div>
+                        </div>
+                        <div class="footer-contact">
+                            <p>Children Living With Cancer Foundation<br>
+                                10 Ayanboye Street, Anthony Village, Lagos <br>
+                                1st Floor, The South Quay Building 189 Marsh Wall London, E14 9SH
+                            </p>
+                            <p>Tel: 
+                                +44 797 571 3604<br>
+                                +234 8033 1569 08 <br>
+                                Email: info@clwcf-ngo.org <br>
+                                 uk@clwcf-ngo.org</p>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-links">
+                            <a href="about.html">→ About Us</a>
+                            <a href="donate.html">→ Donate</a>
+                            <a href="support.html">→ Get Support</a>
+                            <a href="posts.html">→ Latest Posts</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <p>© Children Living with Cancer Foundation 2025</p>
+                        <div class="footer-legal">
+                            <a href="#privacy">Data Privacy</a>
+                            <a href="#policy">Policy</a>
+                            <a href="#disclaimer">Disclaimer</a>
+                        </div>
+                    </div>
+                    <div class="footer-social-bottom">
+                        <p>Follow us on:</p>
+                        <div class="social-links">
+                            <a href="#" class="social-linkedin">in</a>
+                            <a href="donate.html" class="social-btn donate">Donate now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="support.js"></script>
+</body>
+</html>

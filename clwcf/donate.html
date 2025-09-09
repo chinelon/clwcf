@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Donation - Children Living With Cancer Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="donate.css">
+    <link rel="shortcut icon" href="img/images-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html"></a><img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation" class="logoimg"></a>
+                <span class="logo-text">
+                    <strong>CHILDREN LIVING</strong><br>
+                    <strong> WITH CANCER FOUNDATION</strong><br>
+                    <small>Bridging the global divide in cancer care</small>
+                </span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate.html" class="btn-donate active">Donate</a></li>
+                <li><a href="support.html" class="btn-support">Get Support</a></li>
+                <li><a href="middlepage.html">Walkathon 2025</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+
+    <!-- Donation Form Section -->
+    <section class="donation-section">
+        <div class="container">
+            <div class="donation-content">
+                <div class="donation-form-container">
+                    <h2>Choose Your Donation Amount</h2>
+                    
+                    <!-- Donation Type Selection -->
+                    <div class="donation-type">
+                        <button class="type-btn active" data-type="one-time">One-Time Donation</button>
+                        <button class="type-btn" data-type="monthly">Monthly Giving</button>
+                    </div>
+
+                    <!-- Amount Selection -->
+                    <div class="amount-selection">
+                        <div class="preset-amounts">
+                            <button class="amount-btn" data-amount="1000">₦1000</button>
+                            <button class="amount-btn" data-amount="1500">₦1500</button>
+                            <button class="amount-btn active" data-amount="2000">₦2000</button>
+                            <button class="amount-btn" data-amount="2500">₦2500</button>
+                            <button class="amount-btn" data-amount="5000">₦5000</button>
+                            <button class="amount-btn custom-btn">Custom</button>
+                        </div>
+                        <div class="custom-amount-input" style="display: none;">
+                            <input type="number" id="customAmount" placeholder="Enter amount" min="1">
+                            <span class="currency">₦</span>
+                        </div>
+                    </div>
+
+                    <!-- Donation Purpose -->
+                    <div class="donation-purpose">
+                        <h3>Where would you like your donation to go?</h3>
+                        <select id="donationPurpose">
+                            <option value="general">Where needed most</option>
+                            <option value="medical">Medical treatments</option>
+                            <option value="family-support">Family support services</option>
+                            <option value="accommodation">Accommodation assistance</option>
+                            <option value="transportation">Transportation costs</option>
+                            <option value="research">Research funding</option>
+                            <option value="education">Educational programs</option>
+                        </select>
+                    </div>
+
+                    <!-- Donor Information -->
+                    <div class="donor-info">
+                        <h3>Your Information</h3>
+                        <div class="form-row">
+                            <input type="text" id="firstName" placeholder="First Name" required>
+                            <input type="text" id="lastName" placeholder="Last Name" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="email" id="email" placeholder="Email Address" required>
+                            <input type="tel" id="phone" placeholder="Phone Number">
+                        </div>
+                        <div class="form-row">
+                            <input type="text" id="address" placeholder="Address">
+                            <input type="text" id="city" placeholder="City">
+                        </div>
+                        <div class="form-row">
+                            <input type="text" id="postcode" placeholder="Postcode">
+                            <select id="country">
+                                <option value="">Select Country</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="NG">Nigeria</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="AU">Australia</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div class="payment-methods">
+                        <h3>Payment Method</h3>
+                        <div class="payment-options">
+                            <button class="payment-btn active" data-method="card">
+                                <span class="payment-icon">💳</span>
+                                Credit/Debit Card
+                            </button>
+                            <button class="payment-btn" data-method="paypal">
+                                <span class="payment-icon">🅿️</span>
+                                PayPal
+                            </button>
+                            <button class="payment-btn" data-method="bank">
+                                <span class="payment-icon">🏦</span>
+                                Bank Transfer
+                            </button>
+                        </div>
+
+                        <!-- Card Payment Form -->
+                        <div class="payment-form card-form active">
+                            <div class="form-row">
+                                <input type="text" id="cardNumber" placeholder="Card Number" maxlength="19">
+                                <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" id="cvv" placeholder="CVV" maxlength="4">
+                                <input type="text" id="cardName" placeholder="Name on Card">
+                            </div>
+                        </div>
+
+                        <!-- PayPal Form -->
+                        <div class="payment-form paypal-form">
+                            <p>You will be redirected to PayPal to complete your donation securely.</p>
+                            <div class="paypal-info">
+                                <span class="paypal-icon">🔒</span>
+                                <span>Secure PayPal Payment</span>
+                            </div>
+                        </div>
+
+                        <!-- Bank Transfer Form -->
+                        <div class="payment-form bank-form">
+                            <div class="bank-details">
+                                <h4>Bank Transfer Details</h4>
+                                <div class="bank-info">
+                                    <p><strong>Account Name:</strong> Children Living With Cancer Foundation</p>
+                                    <p><strong>Sort Code:</strong> 12-34-56</p>
+                                    <p><strong>Account Number:</strong> 12345678</p>
+                                    <p><strong>IBAN:</strong> GB29 NWBK 1234 5612 3456 78</p>
+                                    <p><strong>Reference:</strong> Please use your name and "Donation"</p>
+                                </div>
+                                <div class="bank-note">
+                                    <p>Please email us at <a href="mailto:donations@clwcf-ngo.org">donations@clwcf-ngo.org</a> after making your transfer so we can acknowledge your donation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Options -->
+                    <div class="additional-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter">
+                            <span class="checkmark"></span>
+                            I would like to receive updates about CLWCF's work
+                        </label>
+                        
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="anonymous">
+                            <span class="checkmark"></span>
+                            Make this donation anonymous
+                        </label>
+                    </div>
+
+                    <!-- Donation Summary -->
+                    <div class="donation-summary">
+                        <div class="summary-row">
+                            <span>Donation Amount:</span>
+                            <span class="summary-amount">£100.00</span>
+                        </div>
+                        <div class="summary-row gift-aid-row" style="display: none;">
+                            <span>Gift Aid (25%):</span>
+                            <span class="gift-aid-amount">£25.00</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>Total Impact:</span>
+                            <span class="total-amount">£100.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button class="donate-btn" id="submitDonation">
+                        <span class="btn-text">Donate Now</span>
+                        <span class="btn-amount">₦100</span>
+                    </button>
+
+                    <!-- Security Notice -->
+                    <div class="security-notice">
+                        <span class="security-icon">🔒</span>
+                        <span>Your donation is secure and encrypted. We never store your payment details.</span>
+                    </div>
+                </div>
+
+                <!-- Impact Information -->
+                <div class="impact-info">
+                    <h3>Your Impact</h3>
+                    <div class="impact-cards">
+                        <div class="impact-card">
+                            <div class="impact-icon">🏥</div>
+                            <h4>Medical Support</h4>
+                            <p>Help cover the cost of treatments, medications, and medical equipment for children with cancer.</p>
+                        </div>
+                        
+                        <div class="impact-card">
+                            <div class="impact-icon">🏠</div>
+                            <h4>Family Accommodation</h4>
+                            <p>Provide safe, comfortable accommodation for families during their child's treatment.</p>
+                        </div>
+                        
+                        <div class="impact-card">
+                            <div class="impact-icon">🚗</div>
+                            <h4>Transportation</h4>
+                            <p>Ensure families can get to and from hospital appointments without financial stress.</p>
+                        </div>
+                        
+                        <div class="impact-card">
+                            <div class="impact-icon">❤️</div>
+                            <h4>Emotional Support</h4>
+                            <p>Fund counseling services and support groups for children and their families.</p>
+                        </div>
+                        
+                        <div class="impact-card">
+                            <div class="impact-icon">📚</div>
+                            <h4>Educational Programs</h4>
+                            <p>Support educational initiatives and awareness campaigns about childhood cancer.</p>
+                        </div>
+                        
+                        <div class="impact-card">
+                            <div class="impact-icon">🔬</div>
+                            <h4>Research Funding</h4>
+                            <p>Contribute to vital research that improves treatment outcomes for children with cancer.</p>
+                        </div>
+                    </div>
+
+                    <!-- Other Ways to Help -->
+                    <div class="other-ways">
+                        <h4>Other Ways to Help</h4>
+                        <div class="help-options">
+                            <a href="#" class="help-option">
+                                <span class="help-icon">🎁</span>
+                                <div>
+                                    <h5>Memorial Donations</h5>
+                                    <p>Honor a loved one's memory</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="help-option">
+                                <span class="help-icon">🎉</span>
+                                <div>
+                                    <h5>Celebration Giving</h5>
+                                    <p>Celebrate special occasions</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="help-option">
+                                <span class="help-icon">🏢</span>
+                                <div>
+                                    <h5>Corporate Partnership</h5>
+                                    <p>Partner with your business</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="help-option">
+                                <span class="help-icon">🤝</span>
+                                <div>
+                                    <h5>Volunteer</h5>
+                                    <p>Give your time and skills</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="success-icon">✅</span>
+                <h2>Thank You!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Your generous donation of <span id="donationAmount"></span> has been received.</p>
+                <p>You will receive a confirmation email shortly with your donation receipt.</p>
+                <p>Your support makes a real difference in the lives of children with cancer and their families.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" onclick="closeModal()">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <div class="footer-logo">
+                            <a href="index.html"></a><img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation" class="logoimg"></a>
+                            <div class="footer-brand">
+                                <h3>CHILDREN LIVING<br>WITH CANCER FOUNDATION</h3>
+                                <p>Bridging the global divide in cancer care</p>
+                            </div>
+                        </div>
+                        <div class="footer-contact">
+                            <p>Children Living With Cancer Foundation<br>
+                                10 Ayanboye Street, Anthony Village, Lagos <br>
+                                1st Floor, The South Quay Building 189 Marsh Wall London, E14 9SH
+                            </p>
+                            <p>Tel: 
+                                +44 797 571 3604<br>
+                                +234 8033 1569 08 <br>
+                                Email: info@clwcf-ngo.org <br>
+                                 uk@clwcf-ngo.org</p>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-links">
+                            <a href="about.html">→ About Us</a>
+                            <a href="donate.html">→ Donate</a>
+                            <a href="support.html">→ Get Support</a>
+                            <a href="posts.html">→ Latest Posts</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <p>© Children Living with Cancer Foundation 2025</p>
+                        <div class="footer-legal">
+                            <a href="#privacy">Data Privacy</a>
+                            <a href="#policy">Policy</a>
+                            <a href="#disclaimer">Disclaimer</a>
+                        </div>
+                    </div>
+                    <div class="footer-social-bottom">
+                        <p>Follow us on:</p>
+                        <div class="social-links">
+                            <a href="#" class="social-linkedin">in</a>
+                            <a href="donate.html" class="social-btn donate">Donate now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="donate.js"></script>
+</body>
+</html>

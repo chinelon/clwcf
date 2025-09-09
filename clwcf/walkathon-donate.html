@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate to Walkathon 2025 - Children Living With Cancer Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="walkathon-donate.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="walkathon-donate.js" defer></script>
+    <link rel="shortcut icon" href="img/images-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation" class="logoimg">
+                </a>
+                <span class="logo-text">
+                    <strong>CHILDREN LIVING</strong><br>
+                    <strong> WITH CANCER FOUNDATION</strong><br>
+                    <small>Bridging the global divide in cancer care</small>
+                </span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate.html" class="btn-donate">Donate</a></li>
+                <li><a href="support.html" class="btn-support">Get Support</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="middlepage.html" class="btn-involved">Walkathon 2025</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+            <!-- Dropdown Menu -->
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="index.html" class="dropdown-link">Home</a>
+                <a href="about.html" class="dropdown-link btndrop btn-about">About</a>
+                <a href="donate.html" class="dropdown-link btndrop btn-donate-drop">Donate</a>
+                <a href="support.html" class="dropdown-link btndrop btn-support-drop">Get Support</a>
+                <a href="posts.html" class="dropdown-link">Latest Posts</a>
+                <a href="gallery.html" class="dropdown-link">Gallery</a>
+                <a href="middlepage.html" class="dropdown-link">Walkathon 2025</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="donation-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="event-badge">
+                    <span class="hashtag">#CLWCFWALKATHON2025</span>
+                </div>
+                <h1>Support<br><span class="italic-text">Walkathon 2025</span></h1>
+                <p>Your donation helps fund childhood cancer treatment, and support programs. Every contribution makes a difference in a child's fight against cancer.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Methods Section -->
+    <section class="donation-methods">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Donation Method</h2>
+                <p>Support our cause through any of these convenient payment options</p>
+                
+                <!-- Donation Method Toggle Menu -->
+                <div class="donation-toggle-menu">
+                    <button class="toggle-btn active" data-method="qr-code">
+                        <span>Paystack</span>
+                    </button>
+                    <button class="toggle-btn" data-method="bank-transfer">
+                        <span>Bank Transfer</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="donation-options">
+                <!-- QR Code Donation -->
+                <div class="donation-card qr-card active" data-method="qr-code">
+                    <div class="card-header">
+                        <div class="method-icon qr-icon"></div>
+                        <h3>Paystack</h3>
+                        <p>Quick and secure mobile payment</p>
+                    </div>
+                    
+                    <div class="qr-section">
+                        <div class="qr-code-container">
+                            <div class="qr-code-placeholder">
+                                <div class="qr-pattern">
+                                    <a href="https://paystack.shop/pay/clwcf"><img src="img/paylogo.webp" class="qr-pattern" alt=""></a>
+                                </div>
+                            </div>
+                            <p class="qr-instruction">Click the image to make a Paystack Donation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bank Transfer -->
+                <div class="donation-card bank-card" data-method="bank-transfer">
+                    <div class="card-header">
+                        <div class="method-icon bank-icon"></div>
+                        <h3>Bank Transfer</h3>
+                        <p>Direct transfer to our account</p>
+                    </div>
+                    
+                    <div class="bank-details">
+                        <div class="bank-info">
+                            <div class="bank-item">
+                                <label>Bank Name:</label>
+                                <div class="bank-value">
+                                    <span>Access Bank</span>
+                                    <button class="copy-btn" data-copy="First Bank of Nigeria"><span class="copy-icon"></span></button>
+                                </div>
+                            </div>
+                            
+                            <div class="bank-item">
+                                <label>Account Name:</label>
+                                <div class="bank-value">
+                                    <span>Children Living With Cancer Foundation</span>
+                                    <button class="copy-btn" data-copy="Children Living With Cancer Foundation"><span class="copy-icon"></span></button>
+                                </div>
+                            </div>
+                            
+                            <div class="bank-item">
+                                <label>Account Number:</label>
+                                <div class="bank-value">
+                                    <span class="account-number">0001180359</span>
+                                    <button class="copy-btn" data-copy="2034567890"><span class="copy-icon"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="transfer-note">
+                            <div class="note-icon info-icon"></div>
+                            <div class="note-content">
+                                <h4>Important:</h4>
+                                <p>Please use "WALKATHON2025 - [Your Name]" as the transfer reference to help us track your donation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Confirmation Section -->
+    <section class="donation-confirmation">
+        <div class="container">
+            <div class="confirmation-content">
+                <h2>After Your Donation</h2>
+                <p>Help us track your contribution and send you a receipt</p>
+                
+                <form class="confirmation-form" id="donationConfirmationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="donorName">Your Name *</label>
+                            <input type="text" id="donorName" name="donorName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="donorEmail">Email Address *</label>
+                            <input type="email" id="donorEmail" name="donorEmail" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="donationAmount">Donation Amount (₦) *</label>
+                            <input type="number" id="donationAmount" name="donationAmount" min="1000" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="paymentMethod">Payment Method *</label>
+                            <select id="paymentMethod" name="paymentMethod" required>
+                                <option value="">Select payment method</option>
+                                <option value="qr-code">Paystack</option>
+                                <option value="bank-transfer">Bank Transfer (Nigeria)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="transactionRef">Transaction Reference School (Optional)</label>
+                        <select id="paymentMethod" name="paymentMethod" required>
+                            <option value="">Corona Day Secondary school, lekki</option>
+                            <option value="qr-code">Greensprings School, lekki</option>
+                            <option value="bank-transfer">Chrisland School, VGC</option>
+                            <option value="international">Kayron International School, lekki</option>
+                            <option value="qr-code">White Dove School, Sangotedo</option>
+                            <option value="bank-transfer">New Hall International School, Chevy View, Chevron</option>
+                            <option value="international">Tollywood School, Lekki</option>
+                            <option value="international">Debirus College, Sangotedo, lekki</option>
+                            <option value="international">Covenant Child Academy, lekki</option>
+                            <option value="international">Chalcedony School, Abijo GRA. lekki</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="donorMessage">Message (Optional)</label>
+                        <textarea id="donorMessage" name="donorMessage" rows="3" placeholder="Leave a message of support..."></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="confirm-btn">
+                            <span>Confirm Donation</span>
+                            <span class="btn-icon confirm-icon"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-content">
+                <h2>Your Impact</h2>
+                <p>See how your donation helps children fighting cancer</p>
+                
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <div class="impact-icon medical-icon"></div>
+                        <h3>Medical Treatment</h3>
+                        <p>Funding chemotherapy, surgery, and specialized care for children with cancer</p>
+                    </div>
+                    
+                    <div class="impact-item">
+                        <div class="impact-icon healthcare-icon"></div>
+                        <h3>Healthcare Support</h3>
+                        <p>Training healthcare workers and improving cancer care facilities</p>
+                    </div>
+                    
+                    <div class="impact-item">
+                        <div class="impact-icon family-icon"></div>
+                        <h3>Family Support</h3>
+                        <p>Providing accommodation, meals, and emotional support for families</p>
+                    </div>
+                    
+                    <div class="impact-item">
+                        <div class="impact-icon research-icon"></div>
+                        <h3>Research & Awareness</h3>
+                        <p>Funding research and raising awareness about childhood cancer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="success-icon checkmark-icon"></span>
+                <h2>Thank You!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Your donation confirmation has been received. We will send you a receipt via email once we verify your payment.</p>
+                <p><strong>Together, we're making a difference in children's lives!</strong></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary close-modal">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copy Success Toast -->
+    <div id="copyToast" class="copy-toast">
+        <span class="toast-icon check-icon"></span>
+        <span class="toast-message">Copied to clipboard!</span>
+    </div>
+
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <div class="footer-logo">
+                            <img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation" class="footer-logoimg">
+                            <div class="footer-brand">
+                                <h3>CHILDREN LIVING<br>WITH CANCER FOUNDATION</h3>
+                                <p>Bridging the global divide in cancer care</p>
+                            </div>
+                        </div>
+                        <div class="footer-contact">
+                            <p>Children Living With Cancer Foundation<br>
+                                10 Ayanboye Street, Anthony Village, Lagos <br>
+                                1st Floor, The South Quay Building 189 Marsh Wall London, E14 9SH
+                            </p>
+                            <p>Tel: 
+                                +44 797 571 3604<br>
+                                +234 8033 1569 08 <br>
+                                Email: info@clwcf-ngo.org <br>
+                                 uk@clwcf-ngo.org</p>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-links">
+                            <a href="about.html">→ About Us</a>
+                            <a href="donate.html">→ Donate</a>
+                            <a href="support.html">→ Get Support</a>
+                            <a href="posts.html">→ Latest Posts</a>
+                            <a href="register.html">→ Individual Registration</a>
+                            <a href="team-register.html">→ Team Registration</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <p>© Children Living with Cancer Foundation 2025</p>
+                        <div class="footer-legal">
+                            <a href="#privacy">Data Privacy</a>
+                            <a href="#policy">Policy</a>
+                            <a href="#disclaimer">Disclaimer</a>
+                        </div>
+                    </div>
+                    <div class="footer-social-bottom">
+                        <p>Follow us on:</p>
+                        <div class="social-links">
+                            <a href="#" class="social-linkedin">in</a>
+                            <a href="donate.html" class="social-btn donate">Donate now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Inline JavaScript for Toggle Functionality -->
+    <script>
+        // Simple toggle functionality that runs immediately
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing toggles...');
+            
+            const toggleButtons = document.querySelectorAll('.toggle-btn');
+            const donationCards = document.querySelectorAll('.donation-card');
+            
+            console.log('Toggle buttons found:', toggleButtons.length);
+            console.log('Donation cards found:', donationCards.length);
+            
+            // Add click listeners to toggle buttons
+            toggleButtons.forEach(function(button) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('Button clicked:', this.getAttribute('data-method'));
+                    
+                    const method = this.getAttribute('data-method');
+                    
+                    // Remove active from all buttons
+                    toggleButtons.forEach(function(btn) {
+                        btn.classList.remove('active');
+                    });
+                    
+                    // Add active to clicked button
+                    this.classList.add('active');
+                    
+                    // Remove active from all cards
+                    donationCards.forEach(function(card) {
+                        card.classList.remove('active');
+                    });
+                    
+                    // Add active to matching card
+                    const targetCard = document.querySelector('.donation-card[data-method="' + method + '"]');
+                    if (targetCard) {
+                        targetCard.classList.add('active');
+                        console.log('Activated card for:', method);
+                    }
+                });
+            });
+            
+            // Initialize first button as active
+            const firstButton = document.querySelector('.toggle-btn[data-method="qr-code"]');
+            const firstCard = document.querySelector('.donation-card[data-method="qr-code"]');
+            
+            if (firstButton && firstCard) {
+                firstButton.classList.add('active');
+                firstCard.classList.add('active');
+                console.log('Initialized with QR code active');
+            }
+        });
+    </script>
+</body>
+</html>

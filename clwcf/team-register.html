@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Registration - Walkathon 2025 - Children Living With Cancer Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="team-register.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="img/images-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+               <a href="index.html"> <img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation" class="logoimg"></a>
+                <span class="logo-text">
+                    <strong>CHILDREN LIVING</strong><br>
+                    <strong> WITH CANCER FOUNDATION</strong><br>
+                    <small>Bridging the global divide in cancer care</small>
+                </span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate.html" class="btn-donate">Donate</a></li>
+                <li><a href="support.html" class="btn-support">Get Support</a></li>
+                <li><a href="middlepage.html">Walkathon 2025</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+             <!-- Dropdown Menu -->
+             <div class="dropdown-menu" id="dropdownMenu">
+                <a href="index.html" class="dropdown-link">Home</a>
+                <a href="about.html" class="dropdown-link btndrop btn-about">About</a>
+                <a href="donate.html" class="dropdown-link btndrop btn-donate-drop">Donate</a>
+                <a href="support.html" class="dropdown-link btndrop btn-support-drop">Get Support</a>
+                <a href="posts.html" class="dropdown-link">Latest Posts</a>
+                <a href="gallery.html" class="dropdown-link">Gallery</a>
+                <a href="middlepage.html" class="dropdown-link">Walkathon 2025</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="walkathon-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="event-badge">
+                    <span class="hashtag">#CLWCFWALKATHON2025</span>
+                </div>
+                <h1>Team Registration<br><span class="italic-text">Walkathon 2025</span></h1>
+                <p>Register your team for our annual walkathon. Unite with your colleagues, friends, or community to make a greater impact in the fight against childhood cancer.</p>
+                <div class="event-details">
+                    <div class="event-detail">
+                        <span class="detail-icon">📅</span>
+                        <span>18 October, 2025</span>
+                    </div>
+                    <div class="event-detail">
+                        <span class="detail-icon">📍</span>
+                        <span>Caleb British Int'l School</span>
+                    </div>
+                    <div class="event-detail">
+                        <span class="detail-icon">🕘</span>
+                        <span>1/09/25 - 17/10/25</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="registration-section">
+        <div class="container">
+            <div class="registration-content">
+                <div class="registration-form-container">
+                    <div class="form-header">
+                        <h2>Team Registration for Walkathon 2025</h2>
+                        <p>Register your team and help us make a bigger impact together</p>
+                        <div class="registration-type-indicator">
+                            <span class="type-badge team-badge">Team Registration</span>
+                        </div>
+                    </div>
+
+                    <form id="teamWalkathonForm" class="registration-form">
+                        <!-- Team Information -->
+                        <div class="form-section">
+                            <h3>Team Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="teamName">Team Name *</label>
+                                    <input type="text" id="teamName" name="teamName" placeholder="Enter your team name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="teamSize">Number of Team Members *</label>
+                                    <input type="number" id="teamSize" name="teamSize" min="2" max="50" placeholder="2-50 members" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full-width">
+                                    <label for="teamDescription">Team Description</label>
+                                    <textarea id="teamDescription" name="teamDescription" rows="3" placeholder="Tell us about your team, your mission, or why you're participating..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Captain Information -->
+                        <div class="form-section">
+                            <h3>Team Captain Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="captainFirstName">Captain First Name *</label>
+                                    <input type="text" id="captainFirstName" name="captainFirstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="captainLastName">Captain Last Name *</label>
+                                    <input type="text" id="captainLastName" name="captainLastName" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="captainEmail">Captain Email Address *</label>
+                                    <input type="email" id="captainEmail" name="captainEmail" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="captainPhone">Captain Phone Number *</label>
+                                    <input type="tel" id="captainPhone" name="captainPhone" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="captainDateOfBirth">Captain Date of Birth *</label>
+                                    <input type="date" id="captainDateOfBirth" name="captainDateOfBirth" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="captainGender">Captain Gender</label>
+                                    <select id="captainGender" name="captainGender">
+                                        <option value="">Select Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- T-Shirt Size for Captain -->
+                        <div class="form-section">
+                            <h3>Captain's Complimentary T-Shirt</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="captainTshirtSize">Captain's T-Shirt Size *</label>
+                                    <select id="captainTshirtSize" name="captainTshirtSize" required>
+                                        <option value="">Select Size</option>
+                                        <option value="XS">Extra Small (XS)</option>
+                                        <option value="S">Small (S)</option>
+                                        <option value="M">Medium (M)</option>
+                                        <option value="L">Large (L)</option>
+                                        <option value="XL">Extra Large (XL)</option>
+                                        <option value="XXL">2X Large (XXL)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="team-tshirt-note">
+                                <p><strong>Note:</strong> Additional team member t-shirts can be ordered separately. Please contact us after registration for bulk t-shirt orders.</p>
+                            </div>
+                        </div>
+
+                        <!-- Emergency Contact -->
+                        <div class="form-section">
+                            <h3>Emergency Contact</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="emergencyName">Emergency Contact Name *</label>
+                                    <input type="text" id="emergencyName" name="emergencyName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="emergencyPhone">Emergency Contact Phone *</label>
+                                    <input type="tel" id="emergencyPhone" name="emergencyPhone" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="emergencyRelation">Relationship to Captain *</label>
+                                    <select id="emergencyRelation" name="emergencyRelation" required>
+                                        <option value="">Select Relationship</option>
+                                        <option value="spouse">Spouse/Partner</option>
+                                        <option value="parent">Parent</option>
+                                        <option value="child">Child</option>
+                                        <option value="sibling">Sibling</option>
+                                        <option value="friend">Friend</option>
+                                        <option value="colleague">Colleague</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Medical Information -->
+                        <div class="form-section">
+                            <h3>Medical Information</h3>
+                            <div class="form-row">
+                                <div class="form-group full-width">
+                                    <label for="medicalConditions">Captain's Medical Conditions or Allergies</label>
+                                    <textarea id="medicalConditions" name="medicalConditions" rows="3" placeholder="Please list any medical conditions, allergies, or medications we should be aware of for the team captain..."></textarea>
+                                </div>
+                            </div>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="medicalConsent" name="medicalConsent" required>
+                                    <span class="checkmark"></span>
+                                    I confirm that the team captain is physically fit to participate in this walking event *
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Additional Options -->
+                        <div class="form-section">
+                            <h3>Additional Options</h3>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    I would like to receive updates about CLWCF events and activities
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="photography" name="photography">
+                                    <span class="checkmark"></span>
+                                    I consent to the team being photographed/filmed during the event for promotional purposes
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="volunteer" name="volunteer">
+                                    <span class="checkmark"></span>
+                                    Our team is interested in volunteering at future CLWCF events
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Terms and Conditions -->
+                        <div class="form-section">
+                            <div class="terms-dropdown">
+                                <h3 class="terms-header" onclick="toggleTerms()">
+                                    Terms and Conditions
+                                    <span class="dropdown-arrow" id="termsArrow">▼</span>
+                                </h3>
+                                <div class="terms-content" id="termsContent" style="display: none;">
+                                    <p>By registering your team for Walkathon 2025, you agree to the following:</p>
+                                    <ul>
+                                        <li>Team members participate at their own risk and CLWCF is not liable for any injuries</li>
+                                        <li>Registration fees are non-refundable unless the event is cancelled</li>
+                                        <li>All team members will follow event guidelines and safety instructions</li>
+                                        <li>Team captain is responsible for communicating event details to all team members</li>
+                                        <li>Personal data will be used in accordance with our Privacy Policy</li>
+                                        <li>Team captain represents the team in all official communications</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="termsAccepted" name="termsAccepted" required>
+                                    <span class="checkmark"></span>
+                                    I accept the terms and conditions and waiver of liability on behalf of the team *
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-actions">
+                            <button type="submit" class="register-btn">
+                                <span class="btn-text">Complete Team Registration</span>
+                            </button>
+                        </div>
+
+                        <!-- Security Notice -->
+                        <div class="security-notice">
+                            <span class="security-icon"></span>
+                            <span>Your team information is secure and will only be used for event registration and communication.</span>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Event Information Sidebar -->
+                <div class="event-info-sidebar">
+                    <div class="event-card">
+                        <h3>Team Benefits</h3>
+                        <div class="event-info">
+                            <div class="info-item">
+                                <span class="info-icon"></span>
+                                <div>
+                                    <strong>Group Impact</strong>
+                                    <p>Make a bigger difference together as a unified team</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon"></span>
+                                <div>
+                                    <strong>Team Recognition</strong>
+                                    <p>Special recognition for participating teams</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon"></span>
+                                <div>
+                                    <strong>Bulk Support</strong>
+                                    <p>Assistance with team coordination and materials</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="whats-included-card">
+                        <h3>What's Included</h3>
+                        <ul class="included-list">
+                            <li>🗹 Team captain's official t-shirt</li>
+                            <li>🗹 Team participation certificate</li>
+                            <li>🗹 Team photo opportunities</li>
+                            <li>🗹 Refreshments for all members</li>
+                            <li>🗹 First aid support</li>
+                            <li>🗹 Route marshals</li>
+                            <li>🗹 Team coordination support</li>
+                            <li>🗹 Fundraising materials</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="success-icon">🎉</span>
+                <h2>Team Registration Successful!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for registering your team for Walkathon 2025!</p>
+                <p>You will receive a confirmation email shortly with your team registration details and further instructions.</p>
+                <p>We look forward to seeing your team on September 2025 for this meaningful event.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" onclick="closeModal()">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <div class="footer-logo">
+                            <img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation" class="footer-logoimg">
+                            <div class="footer-brand">
+                                <h3>CHILDREN LIVING<br>WITH CANCER FOUNDATION</h3>
+                                <p>Bridging the global divide in cancer care</p>
+                            </div>
+                        </div>
+                        <div class="footer-contact">
+                            <p>Children Living With Cancer Foundation<br>
+                                10 Ayanboye Street, Anthony Village, Lagos <br>
+                                1st Floor, The South Quay Building 189 Marsh Wall London, E14 9SH
+                            </p>
+                            <p>Tel: 
+                                +44 797 571 3604<br>
+                                +234 8033 1569 08 <br>
+                                Email: info@clwcf-ngo.org <br>
+                                 uk@clwcf-ngo.org</p>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-links">
+                            <a href="about.html">→ About Us</a>
+                            <a href="donate.html">→ Donate</a>
+                            <a href="support.html">→ Get Support</a>
+                            <a href="posts.html">→ Latest Posts</a>
+                            <a href="register.html">→ Individual Registration</a>
+                            <a href="team-register.html">→ Team Registration</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <p>© Children Living with Cancer Foundation 2025</p>
+                        <div class="footer-legal">
+                            <a href="#privacy">Data Privacy</a>
+                            <a href="#policy">Policy</a>
+                            <a href="#disclaimer">Disclaimer</a>
+                        </div>
+                    </div>
+                    <div class="footer-social-bottom">
+                        <p>Follow us on:</p>
+                        <div class="social-links">
+                            <a href="#" class="social-linkedin">in</a>
+                            <a href="donate.html" class="social-btn donate">Donate now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="team-register.js"></script>
+    <script>
+        // Dropdown menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            
+            // Toggle dropdown menu
+            if (menuToggle && dropdownMenu) {
+                menuToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    dropdownMenu.classList.toggle('active');
+                });
+            }
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (dropdownMenu && !dropdownMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                    dropdownMenu.classList.remove('active');
+                }
+            });
+            
+            // Close on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && dropdownMenu.classList.contains('active')) {
+                    dropdownMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Children Living With Cancer Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="shortcut icon" href="img/images-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html"></a><img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation" class="logoimg"></a>
+                <span class="logo-text">
+                    <strong>CHILDREN LIVING</strong><br>
+                    <strong> WITH CANCER FOUNDATION</strong><br>
+                    <small>Bridging the global divide in cancer care</small>
+                </span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate.html" class="btn-donate">Donate</a></li>
+                <li><a href="support.html" class="btn-support">Get Support</a></li>
+                <li><a href="middlepage.html">Walkathon 2025</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="gallery-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Our <span class="highlight">Gallery</span></h1>
+            <p>Moments of hope, courage, and triumph captured through our journey together</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All Photos</button>
+                <button class="filter-tab" data-filter="events">Events</button>
+                <button class="filter-tab" data-filter="children">Children</button>
+                <button class="filter-tab" data-filter="families">Families</button>
+                <button class="filter-tab" data-filter="volunteers">Volunteers</button>
+                <button class="filter-tab" data-filter="activities">Activities</button>
+                <button class="filter-tab" data-filter="celebrations">Celebrations</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Image 1 -->
+                <div class="gallery-item" data-category="events children" data-aos="fade-up">
+                    <div class="image-container">
+                        <img src="img/walkathon.jpg" alt="Annual Walkathon 2025" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Annual Walkathon 2025</h3>
+                                <p>Community coming together for hope</p>
+                                <button class="view-btn" data-image="img/walkathon.jpg" data-title="Annual Walkathon 2025" data-description="Our biggest fundraising event bringing together families, survivors, and supporters in a celebration of hope and community spirit.">
+                                    <span class="icon">👁️</span> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="gallery-item" data-category="children celebrations" data-aos="fade-up" data-aos-delay="100">
+                    <div class="image-container">
+                        <img src="img/chhildrenday.jpg" alt="Children's Day Celebration" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Children's Day Celebration</h3>
+                                <p>Celebrating our brave warriors</p>
+                                <button class="view-btn" data-image="img/chhildrenday.jpg" data-title="Children's Day Celebration" data-description="A special day dedicated to celebrating the strength, courage, and resilience of all the children we support.">
+                                    <span class="icon">👁️</span> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="gallery-item" data-category="events families" data-aos="fade-up" data-aos-delay="200">
+                    <div class="image-container">
+                        <img src="img/WhatsApp Image 2025-08-16 at 04.27.08_9176d053.jpg" alt="Family Support Conference" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Family Support Conference</h3>
+                                <p>Empowering families with knowledge</p>
+                                <button class="view-btn" data-image="img/WhatsApp Image 2025-08-16 at 04.27.08_9176d053.jpg" data-title="Family Support Conference" data-description="Educational conference providing families with resources, support networks, and the latest information about childhood cancer care.">
+                                    <span class="icon">👁️</span> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="gallery-item" data-category="volunteers activities" data-aos="fade-up" data-aos-delay="300">
+                    <div class="image-container">
+                        <img src="img/founder.jpg" alt="Founder with Volunteers" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Founder with Volunteers</h3>
+                                <p>Dr. Nneka Nwobbi with our amazing team</p>
+                                <button class="view-btn" data-image="img/founder.jpg" data-title="Founder with Volunteers" data-description="Dr. Nneka Nwobbi, our founder and CEO, working alongside our dedicated volunteers who make our mission possible.">
+                                    <span class="icon">👁️</span> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="gallery-item" data-category="activities children" data-aos="fade-up" data-aos-delay="400">
+                    <div class="image-container">
+                        <img src="img/phinny.jpg" alt="Art Therapy Session" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Art Therapy Session</h3>
+                                <p>Creative healing through art</p>
+                                <button class="view-btn" data-image="img/phinny.jpg" data-title="Art Therapy Session" data-description="Children expressing themselves through art therapy, a vital part of our holistic approach to healing and emotional support.">
+                                    <span class="icon">👁️</span> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 6 -->
+                <div class="gallery-item" data-category="events celebrations" data-aos="fade-up" data-aos-delay="500">
+                    <div class="image-container">
+                        <img src="img/creative-africa.jpg" alt="Creative Africa Partnership" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Creative Africa Partnership</h3>
+                                <p>Building bridges through creativity</p>
+                                <button class="view-btn" data-image="img/creative-africa.jpg" data-title="Creative Africa Partnership" data-description="Celebrating our partnership with Creative Africa, bringing innovative programs and cultural activities to our children.">
+                                    <span class="icon">👁️</span> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 7 -->
+                <div class="gallery-item" data-category="families children" data-aos="fade-up" data-aos-delay="600">
+                    <div class="image-container">
+                        <img src="img/urban-woman.png" alt="Family Support Group" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Family Support Group</h3>
+                                <p>Families supporting each other</p>
+                                <button class="view-btn" data-image="img/urban-woman.png" data-title="Family Support Group" data-description="Families coming together in our support groups, sharing experiences and finding strength in community.">
+                                    <span class="icon">👁️</span> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 8 -->
+                <div class="gallery-item" data-category="events volunteers" data-aos="fade-up" data-aos-delay="700">
+                    <div class="image-container">
+                        <img src="img/unilag-fm-.png" alt="Radio Partnership Event" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Radio Partnership Event</h3>
+                                <p>Spreading awareness through media</p>
+                                <button class="view-btn" data-image="img/unilag-fm-.png" data-title="Radio Partnership Event" data-description="Launch event for our partnership with UniLag FM, expanding our reach to spread awareness about childhood cancer.">
+                                    <span class="icon">👁️</span> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 9 -->
+                <div class="gallery-item" data-category="activities children" data-aos="fade-up" data-aos-delay="800">
+                    <div class="image-container">
+                        <img src="img/afriglobal-logo-medic.png" alt="Medical Partnership" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Medical Partnership</h3>
+                                <p>Advancing pediatric cancer care</p>
+                                <button class="view-btn" data-image="img/afriglobal-logo-medic.png" data-title="Medical Partnership" data-description="Collaboration with AfriGlobal Medical to improve access to quality healthcare for children with cancer.">
+                                    <span class="icon">👁️</span> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 10 -->
+                <div class="gallery-item" data-category="celebrations children" data-aos="fade-up" data-aos-delay="900">
+                    <div class="image-container">
+                        <img src="img/1748091304456.jpg" alt="Survivor Celebration" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Survivor Celebration</h3>
+                                <p>Celebrating victories and milestones</p>
+                                <button class="view-btn" data-image="img/1748091304456.jpg" data-title="Survivor Celebration" data-description="A joyous celebration honoring our cancer survivors and their incredible journey of courage and determination.">
+                                    <span class="icon">👁️</span> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 11 -->
+                <div class="gallery-item" data-category="events families" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="image-container">
+                        <img src="img/AFRIGLOBAL-GROUP-LOGO-ORIGINAL-600x180.jpg" alt="AfriGlobal Partnership Launch" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>AfriGlobal Partnership Launch</h3>
+                                <p>Expanding our reach and impact</p>
+                                <button class="view-btn" data-image="img/AFRIGLOBAL-GROUP-LOGO-ORIGINAL-600x180.jpg" data-title="AfriGlobal Partnership Launch" data-description="Official launch of our strategic partnership with AfriGlobal Group to enhance our services and reach more families.">
+                                    <span class="icon">👁️</span> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 12 -->
+                <div class="gallery-item" data-category="volunteers activities" data-aos="fade-up" data-aos-delay="1100">
+                    <div class="image-container">
+                        <img src="img/LGA-Logo-ng.png" alt="Government Partnership" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Government Partnership</h3>
+                                <p>Working with local authorities</p>
+                                <button class="view-btn" data-image="img/LGA-Logo-ng.png" data-title="Government Partnership" data-description="Collaboration with local government authorities to improve healthcare infrastructure and support for families.">
+                                    <span class="icon">👁️</span> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="load-more-btn" id="loadMoreBtn">Load More Images</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal">
+        <div class="modal-backdrop" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="">
+                <div class="modal-nav">
+                    <button class="nav-btn prev-btn" onclick="previousImage()">❮</button>
+                    <button class="nav-btn next-btn" onclick="nextImage()">❯</button>
+                </div>
+            </div>
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+                <div class="modal-actions">
+                    <button class="action-btn share-btn" onclick="shareImage()">
+                        <span class="icon">📤</span> Share
+                    </button>
+                    <button class="action-btn download-btn" onclick="downloadImage()">
+                        <span class="icon">📥</span> Download
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="gallery-stats">
+        <div class="container">
+            <h2>Moments Captured</h2>
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="fade-up">
+                    <div class="stat-icon">📸</div>
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Photos Captured</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon">🎉</div>
+                    <div class="stat-number" data-target="25">0</div>
+                    <div class="stat-label">Events Documented</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon">👨‍👩‍👧‍👦</div>
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-label">Families Featured</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon">😊</div>
+                    <div class="stat-number" data-target="1000">0</div>
+                    <div class="stat-label">Smiles Shared</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="gallery-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Share Your Story</h2>
+                <p>Do you have photos or stories you'd like to share with our community? We'd love to feature your journey and celebrate your strength.</p>
+                <div class="cta-buttons">
+                    <a href="support.html" class="btn-primary">Share Your Story</a>
+                    <a href="donate.html" class="btn-secondary">Support Our Mission</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <div class="footer-logo">
+                            <a href="index.html"></a><img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation" class="logoimg"></a>
+                            <div class="footer-brand">
+                                <h3>CHILDREN LIVING<br>WITH CANCER FOUNDATION</h3>
+                                <p>Bridging the global divide in cancer care</p>
+                            </div>
+                        </div>
+                        <div class="footer-contact">
+                            <p>Children Living With Cancer Foundation<br>
+                                10 Ayanboye Street, Anthony Village, Lagos <br>
+                                1st Floor, The South Quay Building 189 Marsh Wall London, E14 9SH
+                            </p>
+                            <p>Tel: 
+                                +44 797 571 3604<br>
+                                +234 8033 1569 08 <br>
+                                Email: info@clwcf-ngo.org <br>
+                                 uk@clwcf-ngo.org</p>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-links">
+                            <a href="about.html">→ About Us</a>
+                            <a href="donate.html">→ Donate</a>
+                            <a href="support.html">→ Get Support</a>
+                            <a href="posts.html">→ Latest Posts</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <p>© Children Living with Cancer Foundation 2025</p>
+                        <div class="footer-legal">
+                            <a href="#privacy">Data Privacy</a>
+                            <a href="#policy">Policy</a>
+                            <a href="#disclaimer">Disclaimer</a>
+                        </div>
+                    </div>
+                    <div class="footer-social-bottom">
+                        <p>Follow us on:</p>
+                        <div class="social-links">
+                            <a href="#" class="social-linkedin">in</a>
+                            <a href="donate.html" class="social-btn donate">Donate now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

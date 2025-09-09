@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkathon 2025 Registration - Children Living With Cancer Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="register.css"> 
+    <link rel="stylesheet" href="middlepage.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="img/images-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+               <a href="index.html"> <img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation" class="logoimg"></a>
+                <span class="logo-text">
+                    <strong>CHILDREN LIVING</strong><br>
+                    <strong> WITH CANCER FOUNDATION</strong><br>
+                    <small>Bridging the global divide in cancer care</small>
+                </span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate.html" class="btn-donate">Donate</a></li>
+                <li><a href="support.html" class="btn-support">Get Support</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="middlepage.html">Walkathon 2025</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+             <!-- Dropdown Menu -->
+             <div class="dropdown-menu" id="dropdownMenu">
+                <a href="index.html" class="dropdown-link">Home</a>
+                <a href="about.html" class="dropdown-link btndrop btn-about">About</a>
+                <a href="donate.html" class="dropdown-link btndrop btn-donate-drop">Donate</a>
+                <a href="support.html" class="dropdown-link btndrop btn-support-drop">Get Support</a>
+                <a href="posts.html" class="dropdown-link">Latest Posts</a>
+                <a href="gallery.html" class="dropdown-link">Gallery</a>
+                <a href="middlepage.html" class="dropdown-link">Walkathon 2025</a>
+            </div>
+        </nav>
+    </header>
+    <section class="walkathon-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="event-badge">
+                    <span class="hashtag">#CLWCFWALKATHON2025</span>
+                </div>
+                <h1>Register For<br><span class="italic-text">Walkathon 2025</span></h1>
+                <p>Join us for our annual walkathon to raise funds and awareness for children living with cancer. Every step counts towards making a difference in young lives.</p>
+                <div class="event-details">
+                    <a href="register.html" class="fontty"><div class="event-detail">
+                        <span class="detail-icon"></span>
+                        <span class="fontty">Individual Registration?</span>
+                    </div></a>
+                    <a href="team-register.html" class="fontty"><div class="event-detail">
+                        <span class="detail-icon"></span>
+                        <span>Team Registration?</span>
+                    </div></a>
+                   <a href="walkathon-donate.html" class="fontty"><div class="event-detail">
+                        <span class="detail-icon"></span>
+                        <span>Sponsor Donations?</span>
+                    </div></a> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <div class="footer-logo">
+                            <a href="index.html"></a><img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation" class="logoimg"></a>
+                            <div class="footer-brand">
+                                <h3>CHILDREN LIVING<br>WITH CANCER FOUNDATION</h3>
+                                <p>Bridging the global divide in cancer care</p>
+                            </div>
+                        </div>
+                        <div class="footer-contact">
+                            <p>Children Living With Cancer Foundation<br>
+                                10 Ayanboye Street, Anthony Village, Lagos <br>
+                                1st Floor, The South Quay Building 189 Marsh Wall London, E14 9SH
+                            </p>
+                            <p>Tel: 
+                                +44 797 571 3604<br>
+                                +234 8033 1569 08 <br>
+                                Email: info@clwcf-ngo.org <br>
+                                 uk@clwcf-ngo.org</p>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-links">
+                            <a href="about.html">→ About Us</a>
+                            <a href="donate.html">→ Donate</a>
+                            <a href="support.html">→ Get Support</a>
+                            <a href="posts.html">→ Latest Posts</a>
+                            <a href="register.html">→ Individual Registration</a>
+                            <a href="team-register.html">→ Team Registration</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <p>© Children Living with Cancer Foundation 2025</p>
+                        <div class="footer-legal">
+                            <a href="#privacy">Data Privacy</a>
+                            <a href="#policy">Policy</a>
+                            <a href="#disclaimer">Disclaimer</a>
+                        </div>
+                    </div>
+                    <div class="footer-social-bottom">
+                        <p>Follow us on:</p>
+                        <div class="social-links">
+                            <a href="#" class="social-linkedin">in</a>
+                            <a href="donate.html" class="social-btn donate">Donate now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Dropdown menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            
+            // Toggle dropdown menu
+            if (menuToggle && dropdownMenu) {
+                menuToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    dropdownMenu.classList.toggle('active');
+                });
+            }
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (dropdownMenu && !dropdownMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                    dropdownMenu.classList.remove('active');
+                }
+            });
+            
+            // Close on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && dropdownMenu.classList.contains('active')) {
+                    dropdownMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
