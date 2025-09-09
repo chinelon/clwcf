@@ -249,27 +249,35 @@ document.addEventListener('DOMContentLoaded', function() {
         // Collect form data
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
-        
+
         // Add checkboxes that might not be in FormData
         const checkboxes = form.querySelectorAll('input[type="checkbox"]');
         checkboxes.forEach(checkbox => {
             data[checkbox.name] = checkbox.checked;
         });
-        
+
         // Add calculated fee (simplified)
         data.registrationFee = registrationFee;
         data.submissionDate = new Date().toISOString();
-        
-        // Save registration data
-        localStorage.setItem('walkathonRegistration', JSON.stringify(data));
-        
-        // Show success modal
-        showSuccessModal(data);
-        
-        // Reset loading state
-        const submitBtn = form.querySelector('.register-btn');
-        submitBtn.classList.remove('loading');
-        submitBtn.disabled = false;
+
+        // Send registration data to backend using Axios
+        axios.post('http://localhost:3001/register', data)
+            .then(function(response) {
+                // Show success modal
+                showSuccessModal(data);
+                // Optionally clear draft data
+                clearDraftData();
+            })
+            .catch(function(error) {
+                alert('Registration failed. Please try again.');
+                console.error(error);
+            })
+            .finally(function() {
+                // Reset loading state
+                const submitBtn = form.querySelector('.register-btn');
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+            });
     }
     
     function showSuccessModal(data) {
