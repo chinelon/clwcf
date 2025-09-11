@@ -1,3 +1,5 @@
+require('dotenv').config();
+const helmet = require('helmet');
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -9,14 +11,15 @@ const PORT = 3001;
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
+app.use(helmet());
 
 // PostgreSQL connection
 const pool = new Pool({
-	user: 'postgres',
-	host: 'localhost',
-	database: 'clwcf',
-	password: 'chinelo',
-	port: 5432,
+	user: process.env.DB_USER || 'postgres',
+	host: process.env.DB_HOST || 'localhost',
+	database: process.env.DB_NAME || 'clwcf',
+	password: process.env.DB_PASSWORD,
+	port: process.env.DB_PORT || 5432,
 });
 
 app.get('/', (req, res) => {
