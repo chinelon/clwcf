@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate to Walkathon 2025 - Children Living With Cancer Foundation</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="walkathon-donate.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="walkathon-donate.js" defer></script>
     <link rel="shortcut icon" href="img/images-removebg-preview.png" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <nav class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation" class="logoimg">
+                    <img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation"
+                        class="logoimg">
                 </a>
                 <span class="logo-text">
                     <strong>CHILDREN LIVING</strong><br>
@@ -54,7 +58,8 @@
                     <span class="hashtag">#CLWCFWALKATHON2025</span>
                 </div>
                 <h1>Support<br><span class="italic-text">Walkathon 2025</span></h1>
-                <p>Your donation helps fund childhood cancer treatment, and support programs. Every contribution makes a difference in a child's fight against cancer.</p>
+                <p>Your donation helps fund childhood cancer treatment, and support programs. Every contribution makes a
+                    difference in a child's fight against cancer.</p>
             </div>
         </div>
     </section>
@@ -65,7 +70,7 @@
             <div class="section-header">
                 <h2>Choose Your Donation Method</h2>
                 <p>Support our cause through any of these convenient payment options</p>
-                
+
                 <!-- Donation Method Toggle Menu -->
                 <div class="donation-toggle-menu">
                     <button class="toggle-btn active" data-method="qr-code">
@@ -85,12 +90,13 @@
                         <h3>Paystack</h3>
                         <p>Quick and secure mobile payment</p>
                     </div>
-                    
+
                     <div class="qr-section">
                         <div class="qr-code-container">
                             <div class="qr-code-placeholder">
                                 <div class="qr-pattern">
-                                    <a href="https://paystack.shop/pay/clwcf"><img src="img/paylogo.webp" class="qr-pattern" alt=""></a>
+                                    <a href="https://paystack.shop/pay/clwcf"><img src="img/paylogo.webp"
+                                            class="qr-pattern" alt=""></a>
                                 </div>
                             </div>
                             <p class="qr-instruction">Click the image to make a Paystack Donation</p>
@@ -105,45 +111,49 @@
                         <h3>Bank Transfer</h3>
                         <p>Direct transfer to our account</p>
                     </div>
-                    
+
                     <div class="bank-details">
                         <div class="bank-info">
                             <div class="bank-item">
                                 <label>Bank Name:</label>
                                 <div class="bank-value">
                                     <span>Access Bank</span>
-                                    <button class="copy-btn" data-copy="First Bank of Nigeria"><span class="copy-icon"></span></button>
+                                    <button class="copy-btn" data-copy="First Bank of Nigeria"><span
+                                            class="copy-icon"></span></button>
                                 </div>
                             </div>
-                            
+
                             <div class="bank-item">
                                 <label>Account Name:</label>
                                 <div class="bank-value">
                                     <span>Children Living With Cancer Foundation</span>
-                                    <button class="copy-btn" data-copy="Children Living With Cancer Foundation"><span class="copy-icon"></span></button>
+                                    <button class="copy-btn" data-copy="Children Living With Cancer Foundation"><span
+                                            class="copy-icon"></span></button>
                                 </div>
                             </div>
-                            
+
                             <div class="bank-item">
                                 <label>Account Number:</label>
                                 <div class="bank-value">
                                     <span class="account-number">0001180359</span>
-                                    <button class="copy-btn" data-copy="2034567890"><span class="copy-icon"></span></button>
+                                    <button class="copy-btn" data-copy="2034567890"><span
+                                            class="copy-icon"></span></button>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="transfer-note">
                             <div class="note-icon info-icon"></div>
                             <div class="note-content">
                                 <h4>Important:</h4>
-                                <p>Please use "WALKATHON2025 - [Your Name]" as the transfer reference to help us track your donation.</p>
+                                <p>Please use "WALKATHON2025 - [Your Name]" as the transfer reference to help us track
+                                    your donation.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-               
+
             </div>
         </div>
     </section>
@@ -154,57 +164,64 @@
             <div class="confirmation-content">
                 <h2>After Your Donation</h2>
                 <p>Help us track your contribution and send you a receipt</p>
-                
+
                 <form class="confirmation-form" id="donationConfirmationForm">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="donorName">Your Name *</label>
                             <input type="text" id="donorName" name="donorName" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="donorEmail">Email Address *</label>
                             <input type="email" id="donorEmail" name="donorEmail" required>
                         </div>
                     </div>
-                    
+
                     <div class="form-row">
                         <div class="form-group">
                             <label for="donationAmount">Donation Amount (₦) *</label>
                             <input type="number" id="donationAmount" name="donationAmount" min="1000" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="paymentMethod">Payment Method *</label>
                             <select id="paymentMethod" name="paymentMethod" required>
                                 <option value="">Select payment method</option>
-                                <option value="qr-code">Paystack</option>
-                                <option value="bank-transfer">Bank Transfer (Nigeria)</option>
+                                <option value="Paystack">Paystack</option>
+                                <option value="Bank Transfer (Nigeria)">Bank Transfer (Nigeria)</option>
                             </select>
                         </div>
                     </div>
-                    
+
                     <div class="form-group full-width">
                         <label for="transactionRef">Transaction Reference School (Optional)</label>
-                        <select id="paymentMethod" name="paymentMethod" required>
-                            <option value="">Corona Day Secondary school, lekki</option>
-                            <option value="qr-code">Greensprings School, lekki</option>
-                            <option value="bank-transfer">Chrisland School, VGC</option>
-                            <option value="international">Kayron International School, lekki</option>
-                            <option value="qr-code">White Dove School, Sangotedo</option>
-                            <option value="bank-transfer">New Hall International School, Chevy View, Chevron</option>
-                            <option value="international">Tollywood School, Lekki</option>
-                            <option value="international">Debirus College, Sangotedo, lekki</option>
-                            <option value="international">Covenant Child Academy, lekki</option>
-                            <option value="international">Chalcedony School, Abijo GRA. lekki</option>
+                        <select id="transactionRef" name="transactionRef" required>
+                            <option value="">-- Select School --</option>
+                            <option value="Corona Day Secondary school, lekki">Corona Day Secondary school, lekki
+                            </option>
+                            <option value="Greensprings School, lekki">Greensprings School, lekki</option>
+                            <option value="Chrisland School, VGC">Chrisland School, VGC</option>
+                            <option value="Kayron International School, lekki">Kayron International School, lekki
+                            </option>
+                            <option value="White Dove School, Sangotedo">White Dove School, Sangotedo</option>
+                            <option value="New Hall International School, Chevy View, Chevron">New Hall International
+                                School, Chevy View, Chevron</option>
+                            <option value="Tollywood School, Lekki">Tollywood School, Lekki</option>
+                            <option value="Debirus College, Sangotedo, lekki">Debirus College, Sangotedo, lekki</option>
+                            <option value="Covenant Child Academy, lekki">Covenant Child Academy, lekki</option>
+                            <option value="Chalcedony School, Abijo GRA. lekki">Chalcedony School, Abijo GRA. lekki
+                            </option>
                         </select>
                     </div>
-                    
+
+
                     <div class="form-group full-width">
                         <label for="donorMessage">Message (Optional)</label>
-                        <textarea id="donorMessage" name="donorMessage" rows="3" placeholder="Leave a message of support..."></textarea>
+                        <textarea id="donorMessage" name="donorMessage" rows="3"
+                            placeholder="Leave a message of support..."></textarea>
                     </div>
-                    
+
                     <div class="form-actions">
                         <button type="submit" class="confirm-btn">
                             <span>Confirm Donation</span>
@@ -222,26 +239,26 @@
             <div class="impact-content">
                 <h2>Your Impact</h2>
                 <p>See how your donation helps children fighting cancer</p>
-                
+
                 <div class="impact-grid">
                     <div class="impact-item">
                         <div class="impact-icon medical-icon"></div>
                         <h3>Medical Treatment</h3>
                         <p>Funding chemotherapy, surgery, and specialized care for children with cancer</p>
                     </div>
-                    
+
                     <div class="impact-item">
                         <div class="impact-icon healthcare-icon"></div>
                         <h3>Healthcare Support</h3>
                         <p>Training healthcare workers and improving cancer care facilities</p>
                     </div>
-                    
+
                     <div class="impact-item">
                         <div class="impact-icon family-icon"></div>
                         <h3>Family Support</h3>
                         <p>Providing accommodation, meals, and emotional support for families</p>
                     </div>
-                    
+
                     <div class="impact-item">
                         <div class="impact-icon research-icon"></div>
                         <h3>Research & Awareness</h3>
@@ -260,7 +277,8 @@
                 <h2>Thank You!</h2>
             </div>
             <div class="modal-body">
-                <p>Your donation confirmation has been received. We will send you a receipt via email once we verify your payment.</p>
+                <p>Your donation confirmation has been received. We will send you a receipt via email once we verify
+                    your payment.</p>
                 <p><strong>Together, we're making a difference in children's lives!</strong></p>
             </div>
             <div class="modal-footer">
@@ -281,7 +299,8 @@
                 <div class="footer-content">
                     <div class="footer-left">
                         <div class="footer-logo">
-                            <img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation" class="footer-logoimg">
+                            <img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation"
+                                class="footer-logoimg">
                             <div class="footer-brand">
                                 <h3>CHILDREN LIVING<br>WITH CANCER FOUNDATION</h3>
                                 <p>Bridging the global divide in cancer care</p>
@@ -292,11 +311,11 @@
                                 10 Ayanboye Street, Anthony Village, Lagos <br>
                                 1st Floor, The South Quay Building 189 Marsh Wall London, E14 9SH
                             </p>
-                            <p>Tel: 
+                            <p>Tel:
                                 +44 797 571 3604<br>
                                 +234 8033 1569 08 <br>
                                 Email: info@clwcf-ngo.org <br>
-                                 uk@clwcf-ngo.org</p>
+                                uk@clwcf-ngo.org</p>
                         </div>
                     </div>
                     <div class="footer-right">
@@ -334,40 +353,40 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- Inline JavaScript for Toggle Functionality -->
     <script>
         // Simple toggle functionality that runs immediately
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             console.log('DOM loaded, initializing toggles...');
-            
+
             const toggleButtons = document.querySelectorAll('.toggle-btn');
             const donationCards = document.querySelectorAll('.donation-card');
-            
+
             console.log('Toggle buttons found:', toggleButtons.length);
             console.log('Donation cards found:', donationCards.length);
-            
+
             // Add click listeners to toggle buttons
-            toggleButtons.forEach(function(button) {
-                button.addEventListener('click', function(e) {
+            toggleButtons.forEach(function (button) {
+                button.addEventListener('click', function (e) {
                     e.preventDefault();
                     console.log('Button clicked:', this.getAttribute('data-method'));
-                    
+
                     const method = this.getAttribute('data-method');
-                    
+
                     // Remove active from all buttons
-                    toggleButtons.forEach(function(btn) {
+                    toggleButtons.forEach(function (btn) {
                         btn.classList.remove('active');
                     });
-                    
+
                     // Add active to clicked button
                     this.classList.add('active');
-                    
+
                     // Remove active from all cards
-                    donationCards.forEach(function(card) {
+                    donationCards.forEach(function (card) {
                         card.classList.remove('active');
                     });
-                    
+
                     // Add active to matching card
                     const targetCard = document.querySelector('.donation-card[data-method="' + method + '"]');
                     if (targetCard) {
@@ -376,11 +395,11 @@
                     }
                 });
             });
-            
+
             // Initialize first button as active
             const firstButton = document.querySelector('.toggle-btn[data-method="qr-code"]');
             const firstCard = document.querySelector('.donation-card[data-method="qr-code"]');
-            
+
             if (firstButton && firstCard) {
                 firstButton.classList.add('active');
                 firstCard.classList.add('active');
@@ -389,4 +408,5 @@
         });
     </script>
 </body>
+
 </html>

@@ -378,20 +378,51 @@ function handleFormSubmit(e) {
     processDonation();
 }
 
+// function processDonation() {
+//     // Show success message
+//     showSuccessModal();
+    
+//     // Reset form
+//     resetForm();
+    
+// // Re-enable submit button
+//     const submitButton = formElements.form.querySelector('button[type="submit"]');
+//     if (submitButton) {
+//         submitButton.disabled = false;
+//         submitButton.textContent = 'Donate Now';
+//     }
+// }
+
 function processDonation() {
-    // Show success message
-    showSuccessModal();
-    
-    // Reset form
-    resetForm();
-    
-// Re-enable submit button
-    const submitButton = formElements.form.querySelector('button[type="submit"]');
-    if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.textContent = 'Donate Now';
-    }
+    // Collect data
+    const data = {
+        donorName: formElements.donorName.value.trim(),
+        donorEmail: formElements.donorEmail.value.trim(),
+        donationAmount: formElements.donationAmount.value.trim(),
+        paymentMethod: formElements.paymentMethod.value,
+        transactionRef: formElements.transactionRef ? formElements.transactionRef.value.trim() : null,
+        donorMessage: formElements.donorMessage.value.trim()
+    };
+
+    axios.post("http://localhost:3001/donate", data)
+        .then(response => {
+            console.log("Donation saved:", response.data);
+            showSuccessModal();
+            resetForm();
+        })
+        .catch(error => {
+            console.error("Donation error:", error);
+            alert("Failed to submit donation. Please try again.");
+        })
+        .finally(() => {
+            const submitBtn = formElements.submitBtn;
+            if (submitBtn) {
+                submitBtn.classList.remove("loading");
+                submitBtn.disabled = false;
+            }
+        });
 }
+
 
 function showSuccessModal() {
     if (modal) {

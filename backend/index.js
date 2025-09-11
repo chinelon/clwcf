@@ -90,6 +90,35 @@ app.post("/team-register", async (req, res) => {
 		res.status(500).json({ success: false, message: "Server error" });
 	}
 });
+
+app.post("/donate", async (req, res) => {
+  try {
+    const {
+      donorName,
+      donorEmail,
+      donationAmount,
+      paymentMethod,
+      transactionRef,
+      donorMessage
+    } = req.body;
+
+    const query = `
+      INSERT INTO walkathon.donations 
+      (donor_name, donor_email, donation_amount, payment_method, transaction_ref, donor_message)
+      VALUES ($1, $2, $3, $4, $5, $6)
+      RETURNING *;
+    `;
+
+    const values = [donorName, donorEmail, donationAmount, paymentMethod, transactionRef, donorMessage];
+    const result = await pool.query(query, values);
+
+    res.status(201).json({ message: "Donation saved successfully", donation: result.rows[0] });
+  } catch (error) {
+    console.error("Error saving donation:", error);
+    res.status(500).json({ error: "Failed to save donation" });
+  }
+});
+
 app.listen(PORT, () => {
 	console.log(`Server running on http://localhost:${PORT}`);
 });
