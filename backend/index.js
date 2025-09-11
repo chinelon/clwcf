@@ -57,6 +57,39 @@ app.post('/register', async (req, res) => {
 	}
 });
 
+
+// API route for team registration
+app.post("/team-register", async (req, res) => {
+	const data = req.body;
+	try {
+
+		await pool.query(
+			`INSERT INTO walkathon.team_registrations
+      (team_name, team_size, captain_firstname, captain_lastname, captain_email, captain_phone, captain_gender, captain_tshirt, emergency_name, emergency_relation, 
+       emergency_phone, medical_conditions)
+      VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)`,
+			[
+				data.team_name,
+				data.team_size,
+				data.captain_firstname,
+				data.captain_lastname,
+				data.captain_email,
+				data.captain_phone,
+				data.captain_gender,
+				data.captain_tshirt,
+				data.emergency_name,
+				data.emergency_relation,
+				data.emergency_phone,
+				data.medical_conditions,
+			]
+		);
+
+		res.json({ success: true, message: "Team registered successfully" });
+	} catch (err) {
+		console.error("Error saving team registration:", err);
+		res.status(500).json({ success: false, message: "Server error" });
+	}
+});
 app.listen(PORT, () => {
 	console.log(`Server running on http://localhost:${PORT}`);
 });

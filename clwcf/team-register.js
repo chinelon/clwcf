@@ -3,8 +3,12 @@
 
 // DOM Elements
 let formElements = {};
-let modal = null;
+//let modal = null;
+const form = document.getElementById('teamWalkathonForm');
+const submitBtn = form.querySelector('.register-btn');
+let modal = document.getElementById('successModal');
 
+form.addEventListener('submit', handleFormSubmit);
 // Initialize form when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     initializeForm();
@@ -15,18 +19,19 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeForm() {
     // Get all form elements
     formElements = {
-        form: document.getElementById('teamRegistrationForm'),
+        form: document.getElementById('teamWalkathonForm'), // changed from 'registrationForm' to 'teamWalkathonForm' on 11 september 2025
         
         // Team Information
         teamName: document.getElementById('teamName'),
         teamSize: document.getElementById('teamSize'),
-        teamGoal: document.getElementById('teamGoal'),
+       // teamGoal: document.getElementById('teamGoal'),
         
         // Team Captain Information
-        captainName: document.getElementById('captainName'),
+        captainFirstName: document.getElementById('captainFirstName'),
+        captainLastName: document.getElementById('captainLastName'),
         captainEmail: document.getElementById('captainEmail'),
         captainPhone: document.getElementById('captainPhone'),
-        captainAge: document.getElementById('captainAge'),
+        //captainAge: document.getElementById('captainAge'),
         captainGender: document.getElementById('captainGender'),
         captainTshirt: document.getElementById('captainTshirt'),
         
@@ -37,11 +42,11 @@ function initializeForm() {
         
         // Medical Information
         medicalConditions: document.getElementById('medicalConditions'),
-        medications: document.getElementById('medications'),
-        allergies: document.getElementById('allergies'),
+       // medications: document.getElementById('medications'),
+        //allergies: document.getElementById('allergies'),
         
         // Terms and Conditions
-        termsAccepted: document.getElementById('termsAccepted'),
+       // termsAccepted: document.getElementById('termsAccepted'),
         
         // Submit button
         submitBtn: document.querySelector('.register-btn')
@@ -311,15 +316,132 @@ function validateForm() {
     return isValid;
 }
 
+// function handleFormSubmit(e) {
+//     e.preventDefault();
+    
+//     console.log('Form submission started');
+    
+//     if (!validateForm()) {
+//         console.log('Form validation failed');
+//         // Scroll to first error
+//         const firstError = document.querySelector('.error');
+//         if (firstError) {
+//             firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+//         }
+//         return;
+//     }
+
+//     // Show loading state
+//     const submitBtn = formElements.submitBtn;
+//     if (submitBtn) {
+//         submitBtn.classList.add('loading');
+//         submitBtn.disabled = true;
+//     }
+
+//     // Prepare email data
+//     const emailData = prepareEmailData();
+//     // Show success message
+//     showSuccessModal();
+//     // Reset form
+//     resetForm();
+    
+//     // Re-enable submit button
+//     const submitButton = formElements.form.querySelector('button[type="submit"]');
+//     if (submitButton) {
+//         submitButton.disabled = false;
+//         submitButton.textContent = 'Register Team';
+//     }
+// }
+
+
+// async function handleFormSubmit(e) {
+//     e.preventDefault();
+
+//     if (!validateForm()) {
+//         const firstError = document.querySelector('.error');
+//         if (firstError) {
+//             firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+//         }
+//         return;
+//     }
+
+//     const submitBtn = formElements.submitBtn;
+//     if (submitBtn) {
+//         submitBtn.classList.add('loading');
+//         submitBtn.disabled = true;
+//     }
+
+//     const emailData = prepareEmailData();
+
+//     try {
+//         const response = await axios.post("http://localhost:3001/team-register", emailData, {
+//             headers: { "Content-Type": "application/json" }
+//         });
+
+//         if (response.data.success) {
+//             showSuccessModal();
+//             resetForm();
+//         } else {
+//             alert("Error: " + response.data.message);
+//         }
+//     } catch (error) {
+//         console.error("Submission failed:", error);
+//         alert("Something went wrong. Please try again later.");
+//     }
+
+//     if (submitBtn) {
+//         submitBtn.classList.remove('loading');
+//         submitBtn.disabled = false;
+//     }
+// }
+
+// function handleFormSubmit(e) {
+//     e.preventDefault();
+
+//     if (!validateForm()) {
+//         // Scroll to first error
+//         const firstError = formElements.form.querySelector('.error');
+//         if (firstError) {
+//             firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+//         }
+//         return;
+//     }
+
+//     // Show loading state
+//     const submitBtn = formElements.form.querySelector('.register-btn');
+//     submitBtn.classList.add('loading');
+//     submitBtn.disabled = true;
+
+//     // Send form data to backend
+//     const teamData = prepareEmailData(); // or rename to prepareTeamData() if you prefer
+
+//     axios.post('http://localhost:3001/team-register', teamData, {
+//         headers: { 'Content-Type': 'application/json' }
+//     })
+//     .then(response => {
+//         if (response.data.success) {
+//             showSuccessModal();
+//             resetForm();
+//         } else {
+//             alert("Error: " + response.data.message);
+//         }
+//     })
+//     .catch(error => {
+//         console.error("Submission failed:", error);
+//         alert("Something went wrong. Please try again later.");
+//     })
+//     .finally(() => {
+//         submitBtn.classList.remove('loading');
+//         submitBtn.disabled = false;
+//     });
+// }
+
 function handleFormSubmit(e) {
     e.preventDefault();
-    
-    console.log('Form submission started');
-    
+
     if (!validateForm()) {
-        console.log('Form validation failed');
         // Scroll to first error
-        const firstError = document.querySelector('.error');
+        const firstError = form.querySelector('.error');
         if (firstError) {
             firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
@@ -327,26 +449,95 @@ function handleFormSubmit(e) {
     }
 
     // Show loading state
-    const submitBtn = formElements.submitBtn;
-    if (submitBtn) {
-        submitBtn.classList.add('loading');
-        submitBtn.disabled = true;
-    }
+    submitBtn.classList.add('loading');
+    submitBtn.disabled = true;
 
-    // Prepare email data
-    const emailData = prepareEmailData();
-    // Show success message
-    showSuccessModal();
-    // Reset form
-    resetForm();
-    
-    // Re-enable submit button
-    const submitButton = formElements.form.querySelector('button[type="submit"]');
-    if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.textContent = 'Register Team';
-    }
+    // Simulate short delay before submission
+    setTimeout(() => {
+        submitForm();
+    }, 500);
 }
+
+// function submitForm() {
+//     // Collect form data
+//     const formData = new FormData(form);
+//     const data = Object.fromEntries(formData.entries());
+
+//     // Add checkboxes manually (if not included in FormData)
+//     const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+//     checkboxes.forEach(checkbox => {
+//         data[checkbox.name] = checkbox.checked;
+//     });
+
+//     // Add submission timestamp
+//     data.submissionDate = new Date().toISOString();
+
+//     // Send data to backend using Axios
+//     axios.post('http://localhost:3001/team-register', data)
+//         .then(response => {
+//             if (response.data.success) {
+//                 showSuccessModal();
+//                 form.reset();
+//             } else {
+//                 alert('Registration failed: ' + response.data.message);
+//             }
+//         })
+//         .catch(error => {
+//             console.error(error);
+//             alert('Something went wrong. Please try again.');
+//         })
+//         .finally(() => {
+//             // Reset loading state
+//             submitBtn.classList.remove('loading');
+//             submitBtn.disabled = false;
+//         });
+// }
+
+function submitForm() {
+    // Map form elements to backend column names
+    const data = {
+        team_name: formElements.teamName.value.trim(),
+        team_size: formElements.teamSize.value,
+        // team_goal: formElements.teamGoal ? formElements.teamGoal.value.trim() : 'Not specified',
+
+        captain_name: formElements.captainFirstName.value.trim(),
+        captain_last_name: formElements.captainLastName.value.trim(),
+        captain_email: formElements.captainEmail.value.trim(),
+        captain_phone: formElements.captainPhone.value.trim(),
+       // captain_age: formElements.captainAge.value,
+        captain_gender: formElements.captainGender.value,
+        captain_tshirt: formElements.captainTshirt.value,
+
+        emergency_name: formElements.emergencyName.value.trim(),
+        emergency_relation: formElements.emergencyRelation.value.trim(),
+        emergency_phone: formElements.emergencyPhone.value.trim(),
+
+        medical_conditions: formElements.medicalConditions.value.trim() || 'None',
+        //medications: formElements.medications ? formElements.medications.value.trim() : 'None',
+      //  allergies: formElements.allergies ? formElements.allergies.value.trim() : 'None',
+
+        submission_date: new Date().toISOString()
+    };
+
+    axios.post('http://localhost:3001/team-register', data)
+        .then(response => {
+            if (response.data.success) {
+                showSuccessModal();
+                form.reset();
+            } else {
+                alert('Registration failed: ' + response.data.message);
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            alert('Something went wrong. Please try again.');
+        })
+        .finally(() => {
+            submitBtn.classList.remove('loading');
+            submitBtn.disabled = false;
+        });
+}
+
 
 function prepareEmailData() {
     return {
@@ -356,7 +547,6 @@ function prepareEmailData() {
         // Team Information
         team_name: formElements.teamName.value.trim(),
         team_size: formElements.teamSize.value,
-        team_goal: formElements.teamGoal.value.trim() || 'Not specified',
         
         // Team Captain Information
         captain_name: formElements.captainName.value.trim(),
@@ -373,8 +563,8 @@ function prepareEmailData() {
         
         // Medical Information
         medical_conditions: formElements.medicalConditions.value.trim() || 'None',
-        medications: formElements.medications.value.trim() || 'None',
-        allergies: formElements.allergies.value.trim() || 'None',
+        // medications: formElements.medications.value.trim() || 'None',
+        // allergies: formElements.allergies.value.trim() || 'None',
         
         // Submission Details
         submission_date: new Date().toLocaleDateString(),
