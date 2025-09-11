@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,13 @@
     <script src="script.js"></script>
     <link rel="shortcut icon" href="img/images-removebg-preview.png" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <nav class="container">
             <div class="logo">
-               <a href="index.html"> <img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation" class="logoimg"></a>
+                <a href="index.html"> <img src="img/logonewwwimgg-removebg-preview.png"
+                        alt="International Cancer Foundation" class="logoimg"></a>
                 <span class="logo-text">
                     <strong>CHILDREN LIVING</strong><br>
                     <strong> WITH CANCER FOUNDATION</strong><br>
@@ -29,8 +32,8 @@
                 <li><a href="gallery.html">Gallery</a></li>
             </ul>
             <div class="menu-toggle">☰</div>
-             <!-- Dropdown Menu -->
-             <div class="dropdown-menu" id="dropdownMenu">
+            <!-- Dropdown Menu -->
+            <div class="dropdown-menu" id="dropdownMenu">
                 <a href="index.html" class="dropdown-link">Home</a>
                 <a href="about.html" class="dropdown-link btndrop btn-about">About</a>
                 <a href="donate.html" class="dropdown-link btndrop btn-donate-drop">Donate</a>
@@ -51,7 +54,8 @@
                     <span class="hashtag">#CLWCFWALKATHON2025</span>
                 </div>
                 <h1>Walk for Hope<br><span class="italic-text">Walkathon 2025</span></h1>
-                <p>Join us for our annual walkathon to raise funds and awareness for children living with cancer. Every step counts towards making a difference in young lives.</p>
+                <p>Join us for our annual walkathon to raise funds and awareness for children living with cancer. Every
+                    step counts towards making a difference in young lives.</p>
                 <div class="event-details">
                     <div class="event-detail">
                         <span class="detail-icon">📅</span>
@@ -148,7 +152,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="emergencyPhone">Emergency Contact Phone *</label>
-                                    <input type="tel" id="emergencyPhone" name="emergencyPhone" required>
+                                    <input type="tel" id="emergencyPhone" name="emergencyPhone">
                                 </div>
                             </div>
                             <div class="form-row">
@@ -173,7 +177,8 @@
                             <div class="form-row">
                                 <div class="form-group full-width">
                                     <label for="medicalConditions">Medical Conditions or Allergies</label>
-                                    <textarea id="medicalConditions" name="medicalConditions" rows="3" placeholder="Please list any medical conditions, allergies, or medications we should be aware of..."></textarea>
+                                    <textarea id="medicalConditions" name="medicalConditions" rows="3"
+                                        placeholder="Please list any medical conditions, allergies, or medications we should be aware of..."></textarea>
                                 </div>
                             </div>
                             <div class="checkbox-group">
@@ -217,7 +222,8 @@
                                 <div class="terms-content" id="termsContent" style="display: none;">
                                     <p>By registering for Walkathon 2025, you agree to the following:</p>
                                     <ul>
-                                        <li>You participate at your own risk and CLWCF is not liable for any injuries</li>
+                                        <li>You participate at your own risk and CLWCF is not liable for any injuries
+                                        </li>
                                         <li>Registration fees are non-refundable unless the event is cancelled</li>
                                         <li>You will follow all event guidelines and safety instructions</li>
                                         <li>Your personal data will be used in accordance with our Privacy Policy</li>
@@ -243,7 +249,8 @@
                         <!-- Security Notice -->
                         <div class="security-notice">
                             <span class="security-icon"></span>
-                            <span>Your information is secure and will only be used for event registration and communication.</span>
+                            <span>Your information is secure and will only be used for event registration and
+                                communication.</span>
                         </div>
                     </form>
                 </div>
@@ -311,7 +318,8 @@
             </div>
             <div class="modal-body">
                 <p>Thank you for registering for Walkathon 2025!</p>
-                <p>You will receive a confirmation email shortly with your registration details and further instructions.</p>
+                <p>You will receive a confirmation email shortly with your registration details and further
+                    instructions.</p>
                 <p>We look forward to seeing you on March 15th for this meaningful event.</p>
             </div>
             <div class="modal-footer">
@@ -326,7 +334,8 @@
                 <div class="footer-content">
                     <div class="footer-left">
                         <div class="footer-logo">
-                            <img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation" class="footer-logoimg">
+                            <img src="img/logonewwwimgg-removebg-preview.png" alt="International Cancer Foundation"
+                                class="footer-logoimg">
                             <div class="footer-brand">
                                 <h3>CHILDREN LIVING<br>WITH CANCER FOUNDATION</h3>
                                 <p>Bridging the global divide in cancer care</p>
@@ -337,11 +346,11 @@
                                 10 Ayanboye Street, Anthony Village, Lagos <br>
                                 1st Floor, The South Quay Building 189 Marsh Wall London, E14 9SH
                             </p>
-                            <p>Tel: 
+                            <p>Tel:
                                 +44 797 571 3604<br>
                                 +234 8033 1569 08 <br>
                                 Email: info@clwcf-ngo.org <br>
-                                 uk@clwcf-ngo.org</p>
+                                uk@clwcf-ngo.org</p>
                         </div>
                     </div>
                     <div class="footer-right">
@@ -379,33 +388,33 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="axios.min.js"></script>
     <script src="register.js"></script>
     <script>
         // Dropdown menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const menuToggle = document.querySelector('.menu-toggle');
             const dropdownMenu = document.getElementById('dropdownMenu');
-            
+
             // Toggle dropdown menu
             if (menuToggle && dropdownMenu) {
-                menuToggle.addEventListener('click', function(e) {
+                menuToggle.addEventListener('click', function (e) {
                     e.stopPropagation();
                     dropdownMenu.classList.toggle('active');
                 });
             }
-            
+
             // Close dropdown when clicking outside
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 if (dropdownMenu && !dropdownMenu.contains(e.target) && !menuToggle.contains(e.target)) {
                     dropdownMenu.classList.remove('active');
                 }
             });
-            
+
             // Close on escape key
-            document.addEventListener('keydown', function(e) {
+            document.addEventListener('keydown', function (e) {
                 if (e.key === 'Escape' && dropdownMenu.classList.contains('active')) {
                     dropdownMenu.classList.remove('active');
                 }
@@ -413,4 +422,5 @@
         });
     </script>
 </body>
+
 </html>
