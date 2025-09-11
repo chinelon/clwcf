@@ -404,7 +404,8 @@ function processDonation() {
         donorMessage: formElements.donorMessage.value.trim()
     };
 
-    axios.post("http://localhost:3001/donate", data)
+    //axios.post("http://localhost:3001/donate", data)
+    axios.post("https://clwcf.onrender.com/donate", data)
         .then(response => {
             console.log("Donation saved:", response.data);
             showSuccessModal();

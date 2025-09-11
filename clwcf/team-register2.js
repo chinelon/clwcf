@@ -203,7 +203,8 @@ document.addEventListener('DOMContentLoaded', function () {
             submission_date: new Date().toISOString()
         };
 
-        axios.post('http://localhost:3001/team-register', data)
+       // axios.post('http://localhost:3001/team-register', data)
+        axios.post('https://clwcf.onrender.com/team-register', data)
             .then(response => {
                 if (response.data.success) {
                     showSuccessModal();

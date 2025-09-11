@@ -281,7 +281,8 @@ document.addEventListener('DOMContentLoaded', function () {
         data.submissionDate = new Date().toISOString();
 
         // Send registration data to backend using Axios
-        axios.post('http://localhost:3001/register', data)
+       // axios.post('http://localhost:3001/register', data)
+       axios.post('https://clwcf.onrender.com/register', data)
             .then(function (response) {
                 // Show success modal
                 showSuccessModal(data);
